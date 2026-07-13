@@ -5,21 +5,14 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'DungGeunMo';
-    src: url('./DungGeunMo.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .scroll-container {
-        height: 100%;
-width: 100%;
+        height: 370px;
+width: 250px;
 overflow: auto;
       }
 .Pixso-frame-10_544 {
-        width: 100%;
-height: 100%;
+        width: 250px;
+height: 370px;
 position: relative;
 flex-shrink: 0;
 display: flex;
@@ -42,7 +35,7 @@ position: relative;
       }
 .stroke-wrapper-10_544 {
         position: relative;
-width: 100%;
+width: 250px;
 height: 370px;
 display: flex;
 flex-shrink: 0;
