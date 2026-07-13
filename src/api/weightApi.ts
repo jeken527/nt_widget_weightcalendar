@@ -1,4 +1,5 @@
-const BIN_ID = import.meta.env.VITE_JSONBIN_BIN_ID;
+// 🌟 유저님의 환경 변수 이름(_WEIGHT)에 맞게 수정되었습니다!
+const BIN_ID = import.meta.env.VITE_JSONBIN_BIN_ID_WEIGHT;
 const MASTER_KEY = import.meta.env.VITE_JSONBIN_MASTER_KEY;
 const BASE_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
 
