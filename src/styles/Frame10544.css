@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'Retro Gaming';
+    src: url('./Retro%20Gaming.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('./DungGeunMo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .scroll-container {
         height: 100%;
