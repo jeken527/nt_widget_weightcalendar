@@ -185,12 +185,18 @@ const Frame10544 = () => {
                                                     <div className="stroke-7_584"></div>
                                                 </div>
                                                 {/* 🌟 INSERT 버튼에 저장 핸들러 연결 */}
-                                                <div onClick={handleInsertWeight} style={{cursor: 'pointer'}}>
+                                                <div onClick={async () => {
+                                                    setSearch_button_state_7_660("checked");
+                                                    await handleInsertWeight();
+                                                    setTimeout(() => {
+                                                        setSearch_button_state_7_660("default");}, 200);
+                                                    }} 
+                                                    style={{cursor: 'pointer'}}
+                                                    >
                                                     <Insertbuttoncomponents
                                                         id="7_660"
                                                         className="Pixso-instance-7_660"
                                                         search_button_state={search_button_state_7_660}
-                                                        mousedown={() => setSearch_button_state_7_660("checked")}
                                                         slot_7_593={<p id="2_18" className="Pixso-paragraph-2_18">{"INSERT"}</p>}
                                                     ></Insertbuttoncomponents>
                                                 </div>
