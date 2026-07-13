@@ -164,10 +164,16 @@ const Frame10544 = () => {
                                                         <div className="frame-content-7_584">
                                                             {/* 🌟 기존 p 태그 대신 실제 입력 가능한 input 태그 삽입 */}
                                                             <input
-                                                                type="number"
+                                                                type="text"
+                                                                inputMode="decimal"
                                                                 placeholder="WEI"
                                                                 value={inputWeight}
-                                                                onChange={(e) => setInputWeight(e.target.value)}
+                                                                onChange={(e) => {
+                                                                    let cleanValue = e.target.value.replace(/[^0-9.]/g, "");
+                                                                    const parts = cleanValue.split('.');
+                                                                    if (parts.length > 2) {
+                                                                        cleanValue = parts[0] + '.' + parts.slice(1).join('');}
+                                                                        setInputWeight(cleanValue);}}
                                                                 style={{
                                                                     width: "100%", background: "transparent", border: "none", 
                                                                     textAlign: "center", outline: "none", fontSize: "10px", 
