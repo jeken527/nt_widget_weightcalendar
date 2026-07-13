@@ -4,6 +4,9 @@
     font-weight: normal;
     font-style: normal;
 }
+.scroll-container * {
+    font-family: 'Retro Gaming', monospace !important;
+}
 
 .scroll-container {
         height: 370px;
