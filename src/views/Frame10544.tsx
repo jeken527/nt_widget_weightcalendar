@@ -205,7 +205,9 @@ const Frame10544 = () => {
                                 <div id="4_549" className="Pixso-vector-4_549"></div>
                                 <div id="7_577" className="Pixso-frame-7_577">
                                     <div className="frame-content-7_577">
-                                        <Buttoncomponents id="7_569" className="Pixso-instance-7_569" buttonstate={buttonstate_7_569} mousedown={mousedown_7_569} slot_7_554={<p id="2_22" className="Pixso-paragraph-2_22">{"<"}</p>}></Buttoncomponents>
+                                        <div onClick={mousedown_7_569} style={{ cursor: 'pointer', zIndex: 10 }}>
+                                            <Buttoncomponents id="7_569" className="Pixso-instance-7_569" buttonstate={buttonstate_7_569} slot_7_554={<p id="2_22" className="Pixso-paragraph-2_22">{"<"}</p>}/>
+                                        </div>
                                         <div id="7_576" className="Pixso-frame-7_576">
                                             <div className="frame-content-7_576">
                                                 <div id="11_558" className="Pixso-frame-11_558">
@@ -252,7 +254,9 @@ const Frame10544 = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <Buttoncomponents id="7_572" className="Pixso-instance-7_572" buttonstate={buttonstate_7_572} mousedown={mousedown_7_572} slot_7_554={<p id="2_16" className="Pixso-paragraph-2_16">{">"}</p>}></Buttoncomponents>
+                                        <div onClick={mousedown_7_572} style={{ cursor: 'pointer', zIndex: 10 }}>
+                                            <Buttoncomponents id="7_572" className="Pixso-instance-7_572" buttonstate={buttonstate_7_572} slot_7_554={<p id="2_16" className="Pixso-paragraph-2_16">{">"}</p>}/>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
