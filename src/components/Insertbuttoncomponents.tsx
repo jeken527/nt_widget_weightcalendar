@@ -1,17 +1,13 @@
-import React, { CSSProperties, ReactNode } from "react"; // 🌟 에러 방지: 리액트 타입들 불러오기
 import { withStopPropagation } from "@/utils/utils";
 import "@/styles/Insertbuttoncomponents.css";
-
 interface InsertbuttoncomponentsProps {
+    search_button_state?: string;
     id?: string;
     className?: string;
-    style?: CSSProperties;
-    search_button_state?: string;
-    mousedown?: () => void; 
-    slot_7_593?: ReactNode;
-    slot_7_594?: ReactNode; // 🌟 에러 방지: 아래에서 사용 중인 변수 이름표(Interface) 추가
+    mouseodown?: (e: any) => void;
+    slot_7_593?: React.ReactNode;
+    slot_7_594?: React.ReactNode;
 }
-
 const Insertbuttoncomponents = (props: InsertbuttoncomponentsProps) => {
     const {
         search_button_state,
@@ -26,9 +22,7 @@ const Insertbuttoncomponents = (props: InsertbuttoncomponentsProps) => {
         <div
             className={`component-7_587 ${className}`}
             id={id}
-            // 🌟 에러 방지: onMousedown을 onMouseDown(대문자 D)으로 고치고, 
-            // mousedown이 실제로 존재할 때만 실행되도록 안전장치(?)를 달았습니다!
-            onMouseDown={mousedown ? withStopPropagation(mousedown) : undefined}
+            onMousedown={withStopPropagation(mousedown)}
         >
             <div id="7_587" className="Pixso-symbol-7_587">
                 {search_button_state === "default" && (
@@ -68,5 +62,4 @@ const Insertbuttoncomponents = (props: InsertbuttoncomponentsProps) => {
         </div>
     );
 };
-
 export default Insertbuttoncomponents;
