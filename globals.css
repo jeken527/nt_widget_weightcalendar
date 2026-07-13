@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-retroGaming: var(--font-retro-gaming);
+}
