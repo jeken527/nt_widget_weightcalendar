@@ -22,7 +22,7 @@ const Insertbuttoncomponents = (props: InsertbuttoncomponentsProps) => {
         <div
             className={`component-7_587 ${className}`}
             id={id}
-            onMouseover={withStopPropagation(mouseover)}
+            onMousedown={withStopPropagation(mousedown)}
         >
             <div id="7_587" className="Pixso-symbol-7_587">
                 {search_button_state === "default" && (
