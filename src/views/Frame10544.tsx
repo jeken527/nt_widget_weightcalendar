@@ -112,6 +112,8 @@ const Frame10544 = () => {
     // 버튼 이벤트
     const mousedown_7_569 = () => { setButtonstate_7_569("checked"); setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1)); setTimeout(() => setButtonstate_7_569("default"), 200); };
     const mousedown_7_572 = () => { setButtonstate_7_572("checked"); setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1)); setTimeout(() => setButtonstate_7_572("default"), 200); };
+    const mousedown_7_660 = async () => {
+    if (!inputWeight || isNaN(Number(inputWeight))) return; setSearch_button_state_7_660("checked"); await handleInsertWeight(); setTimeout(() => {setSearch_button_state_7_660("default");}, 200);};
 
     return (
         <div className="scroll-container">
@@ -185,12 +187,12 @@ const Frame10544 = () => {
                                                     <div className="stroke-7_584"></div>
                                                 </div>
                                                 {/* 🌟 INSERT 버튼에 저장 핸들러 연결 */}
-                                                <div onClick={handleInsertWeight} style={{cursor: 'pointer'}}>
+                                                <div onClick={mousedown_7_660} style={{cursor: 'pointer'}}>
                                                     <Insertbuttoncomponents
                                                         id="7_660"
                                                         className="Pixso-instance-7_660"
                                                         search_button_state={search_button_state_7_660}
-                                                        mousedown={() => setSearch_button_state_7_660("checked")}
+                                                        mousedown={mousedown_7_660}
                                                         slot_7_593={<p id="2_18" className="Pixso-paragraph-2_18">{"INSERT"}</p>}
                                                     ></Insertbuttoncomponents>
                                                 </div>
