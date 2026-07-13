@@ -197,6 +197,7 @@ const Frame10544 = () => {
                                                         id="7_660"
                                                         className="Pixso-instance-7_660"
                                                         search_button_state={search_button_state_7_660}
+                                                        mousedown={() => setSearch_button_state_7_660("checked")}
                                                         slot_7_593={<p id="2_18" className="Pixso-paragraph-2_18">{"INSERT"}</p>}
                                                     ></Insertbuttoncomponents>
                                                 </div>
