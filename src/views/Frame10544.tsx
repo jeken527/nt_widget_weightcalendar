@@ -168,6 +168,10 @@ const Frame10544 = () => {
                                                                 placeholder="WEI"
                                                                 value={inputWeight}
                                                                 onChange={(e) => setInputWeight(e.target.value)}
+                                                                onKeyDown={(e) => {
+                                                                    if (e.key === '.' || e.key === 'e' || e.key === 'E' || e.key === '-') 
+                                                                    {e.preventDefault();}
+                                                                }}
                                                                 style={{
                                                                     width: "100%", background: "transparent", border: "none", 
                                                                     textAlign: "center", outline: "none", fontSize: "10px", 
@@ -219,22 +223,22 @@ const Frame10544 = () => {
                                                 <div id="3_1773" className="Pixso-frame-3_1773">
                                                     <div className="frame-content-3_1773">
                                                         {calendarRows.map((week, rowIndex) => (
-                                                            <div key={rowIndex} className="Pixso-frame-3_1698">
-                                                                <div className="frame-content-3_1698">
-                                                                    {week.map((cell: any) => (
-                                                                        <Dailyweightcomponents
-                                                                            key={cell.key || cell.dateKey}
-                                                                            className={`Pixso-instance-${cell.key || cell.dateKey}`}
-                                                                            weigjtinputstate={cell.type === "date" ? "TRUE" : "FALSE"}
-                                                                            slot_3_568={
-                                                                                cell.type === "date" ? (
-                                                                                    <p className="Pixso-paragraph-2_31">
-                                                                                        {/* 🌟 몸무게 기록이 있으면 소수점 버림 출력, 없으면 일반 날짜 출력 */}
-                                                                                        {cell.recordedWeight !== undefined 
-                                                                                            ? Math.floor(cell.recordedWeight) 
-                                                                                            : cell.dayNumber}
-                                                                                    </p>
-                                                                                ) : undefined
+                                                            <div id="3_1773" className="Pixso-frame-3_1773">
+                                                                <div className="frame-content-3_1773">
+                                                                    {calendarRows.map((week, rowIndex) => (
+                                                                <div key={rowIndex} className="Pixso-frame-3_1698">
+                                                                    <div className="frame-content-3_1698">
+                                                                        {week.map((cell: any) => {const hasRecord = cell.type === "date" && cell.recordedWeight !== undefined;
+                                                                          return (<Dailyweightcomponents
+                                                                                      key={cell.key || cell.dateKey}
+                                                                                      className={`Pixso-instance-${cell.key || cell.dateKey}`}
+                                                                                      weigjtinputstate={hasRecord ? "TRUE" : "FALSE"}
+                                                                                      slot_3_568={
+                                                                                          hasRecord ? (
+                                                                                              <p className="Pixso-paragraph-2_31">
+                                                                                                  {Math.floor(cell.recordedWeight)}
+                                                                                              </p>
+                                                                                          ) : undefined
                                                                             }
                                                                         />
                                                                     ))}
