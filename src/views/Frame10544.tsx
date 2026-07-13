@@ -165,7 +165,6 @@ const Frame10544 = () => {
                                                             {/* 🌟 기존 p 태그 대신 실제 입력 가능한 input 태그 삽입 */}
                                                             <input
                                                                 type="number"
-                                                                step="0.1"
                                                                 placeholder="WEI"
                                                                 value={inputWeight}
                                                                 onChange={(e) => setInputWeight(e.target.value)}
