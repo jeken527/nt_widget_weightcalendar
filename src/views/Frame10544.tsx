@@ -221,34 +221,33 @@ const Frame10544 = () => {
                                                     </div>
                                                 </div>
                                                 <div id="3_1773" className="Pixso-frame-3_1773">
-                                                    <div className="frame-content-3_1773">
-                                                        {calendarRows.map((week, rowIndex) => (
-                                                            <div id="3_1773" className="Pixso-frame-3_1773">
-                                                                <div className="frame-content-3_1773">
-                                                                    {calendarRows.map((week, rowIndex) => (
-                                                                <div key={rowIndex} className="Pixso-frame-3_1698">
-                                                                    <div className="frame-content-3_1698">
-                                                                        {week.map((cell: any) => {const hasRecord = cell.type === "date" && cell.recordedWeight !== undefined;
-                                                                          return (<Dailyweightcomponents
-                                                                                      key={cell.key || cell.dateKey}
-                                                                                      className={`Pixso-instance-${cell.key || cell.dateKey}`}
-                                                                                      weigjtinputstate={hasRecord ? "TRUE" : "FALSE"}
-                                                                                      slot_3_568={
-                                                                                          hasRecord ? (
-                                                                                              <p className="Pixso-paragraph-2_31">
-                                                                                                  {Math.floor(cell.recordedWeight)}
-                                                                                              </p>
-                                                                                          ) : undefined
-                                                                            }
-                                                                        />
-                                                                    ))}
-                                                                </div>
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+    <div className="frame-content-3_1773">
+        {calendarRows.map((week, rowIndex) => (
+            <div key={rowIndex} className="Pixso-frame-3_1698">
+                <div className="frame-content-3_1698">
+                    {week.map((cell: any) => {
+                        const hasRecord = cell.type === "date" && cell.recordedWeight !== undefined;
+
+                        return (
+                            <Dailyweightcomponents
+                                key={cell.key || cell.dateKey}
+                                className={`Pixso-instance-${cell.key || cell.dateKey}`}
+                                weigjtinputstate={hasRecord ? "TRUE" : "FALSE"}
+                                slot_3_568={
+                                    hasRecord ? (
+                                        <p className="Pixso-paragraph-2_31">
+                                            {Math.floor(cell.recordedWeight)}
+                                        </p>
+                                    ) : undefined
+                                }
+                            />
+                        );
+                    })}
+                </div>
+            </div>
+        ))}
+    </div>
+</div>
                                         <Buttoncomponents id="7_572" className="Pixso-instance-7_572" buttonstate={buttonstate_7_572} mousedown={mousedown_7_572} slot_7_554={<p id="2_16" className="Pixso-paragraph-2_16">{">"}</p>}></Buttoncomponents>
                                     </div>
                                 </div>
